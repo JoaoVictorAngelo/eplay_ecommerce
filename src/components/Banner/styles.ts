@@ -1,16 +1,40 @@
 import styled from 'styled-components'
-
-import bannerImg from '../../assets/images/banner-homem-aranha.png'
+import { TagContainer } from '../Tag/styles'
 
 export const Imagem = styled.div`
   display: block;
   width: 100%;
   height: 560px;
-  background-image: url(${bannerImg});
   background-repeat: no-repeat;
   background-size: cover;
   font-weight: bold;
-  padding-top: 340px;
+  position: relative;
+
+  .container {
+    z-index: 1;
+    position: relative;
+    padding-top: 340px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  ${TagContainer} {
+    display: flex;
+    position: absolute;
+    top: 32px;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    content: '';
+  }
 `
 
 export const Titulo = styled.h2`

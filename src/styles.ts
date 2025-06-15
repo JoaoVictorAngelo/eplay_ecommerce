@@ -1,10 +1,16 @@
 import { createGlobalStyle } from 'styled-components'
 
+export const breakPoints = {
+  desktop: '1024px',
+  tablet: '768px'
+}
+
 export const cores = {
   branca: '#EEEEEE',
   preta: '#111',
   cinza: '#333',
-  verde: '#10AC84'
+  verde: '#10AC84',
+  cinzaClaro: '#A3A3A3'
 }
 
 export const GlobalCss = createGlobalStyle`
@@ -26,5 +32,9 @@ export const GlobalCss = createGlobalStyle`
   max-width: 1024px;
   width: 100%;
   margin: 0 auto;
+
+  @media (max-width: ${breakPoints.desktop}) {
+    max-width: 80%;
+  }
   }
 `
